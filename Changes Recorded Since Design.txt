@@ -1,0 +1,12 @@
+Changes Recorded Since Design
+
+1. Skills table - Removed JobID from skills
+2. Added Start and End Date for Jobs
+3. Converted JobHistID FK to NULL Allowed since it is possible that a client does not have a job history.
+4. PRIMARY KEY defined on JobHistory as (JobHistID, JobID)
+5. Modified Courses table's primary key as (CourseGroupID, CourseID) where both are not null
+6. Added CourseName to Courses table
+7. Made FromInd and ToInd in CareerSwitch table as FKs pointing to IndID
+8. Added JobID to Feedback table as a FK that is a part of the PK
+9. Added ClientID as an FK to FullTime, PartTime and Contract tables to establish Job - Client relationship.
+10. Added a Reviewer field to capture who left the review for readability of the table
